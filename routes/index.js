@@ -48,6 +48,7 @@ request(options, function (error, response) {
     })
   }
   console.log("list1==="+JSON.stringify(list1));
+  console.log("list1==="+JSON.stringify(list1).length);
   //console.log(response.body.data);
 });
 console.log("byeee")
