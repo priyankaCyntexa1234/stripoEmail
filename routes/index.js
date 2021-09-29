@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 var request = require('request');
-var list1=[];
+
 var token, token1;
 /**
  * Render Config
