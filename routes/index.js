@@ -3,6 +3,7 @@ const fs = require('fs');
 var request = require('request');
 
 var token, token1;
+var list1=[];
 /**
  * Render Config
  * @param req
@@ -43,7 +44,7 @@ exports.config = (req, res) => {
       var id=token[key].emailId;
       console.log("name"+n);
       console.log("name"+id);
-      var list1=[];
+     
       list1.push({
         name: n,
         value:id,
