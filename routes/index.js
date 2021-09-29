@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-
+var request = require('request');
 /**
  * Render Config
  * @param req
@@ -20,7 +20,22 @@ exports.config = (req, res) => {
  * @param req
  * @param res
  */
+
 exports.ui = (req, res) => {
+ console.log("hiiiiiii")
+var options = {
+  'method': 'GET',
+  'url': 'https://stripo.email/emailgeneration/v1/emails',
+  'headers': {
+    'Stripo-Api-Auth': 'eyJhbGciOiJIUzI1NiJ9.eyJzZWN1cml0eUNvbnRleHQiOiJ7XCJhcGlLZXlcIjpcImZhNWM0N2M0LWNlOTktNDcwYi05ODU1LTgyMjhlOWUyNDY1YVwiLFwicHJvamVjdElkXCI6NTEwNzEwfSJ9.buqOPeNIT1Qcv4xF3Yya6cQyDJOwcDJUepjqsSvdn4g'
+  }
+};
+request(options, function (error, response) {
+  if (error) throw new Error(error);
+  console.log(response.body);
+  console.log(response.body.data);
+});
+console.log("byeee")
   res.render('index', {
     title: 'Custom Activity',
     dropdownOptions: [
