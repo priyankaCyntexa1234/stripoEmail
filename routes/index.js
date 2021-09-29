@@ -36,12 +36,18 @@ request(options, function (error, response) {
   console.log(response.body);
   var body2 = JSON.parse(response.body);
   var token =  body2["data"];
-  
+  var list1=[];
   for(var key in token){
-    var n=token[key].name
+    var n=token[key].name;
+    var id=token[key].emailId;
     console.log("name"+n);
+    console.log("name"+id);
+    list1.push({
+      'Name':token[key].name,
+      'Id':token[key].emailId
+    })
   }
-  console.log("token==="+token);
+  console.log("list1==="+list1);
   //console.log(response.body.data);
 });
 console.log("byeee")
