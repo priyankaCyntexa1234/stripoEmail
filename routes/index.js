@@ -47,7 +47,7 @@ request(options, function (error, response) {
       'Id':token[key].emailId
     })
   }
-  console.log("list1==="+JSON.parse(list1));
+  console.log("list1==="+JSON.stringify(list1));
   //console.log(response.body.data);
 });
 console.log("byeee")
