@@ -34,7 +34,10 @@ request(options, function (error, response) {
   if (error) throw new Error(error);
   console.log("in the op")
   console.log(response.body);
-  console.log(response.body.data);
+  var body2 = JSON.parse(response.body);
+  token =  body2["name"];
+  console.log("token==="+response.body.data);
+  //console.log(response.body.data);
 });
 console.log("byeee")
   res.render('index', {
