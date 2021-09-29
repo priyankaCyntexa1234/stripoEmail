@@ -27,7 +27,7 @@ var options = {
   'method': 'GET',
   'url': 'https://stripo.email/emailgeneration/v1/emails',
   'headers': {
-    'Stripo-Api-Auth': 'eyJhbGciOiJIUzI1NiJ9.eyJzZWN1cml0eUNvbnRleHQiOiJ7XCJhcGlLZXlcIjpcImZhNWM0N2M0LWNlOTktNDcwYi05ODU1LTgyMjhlOWUyNDY1YVwiLFwicHJvamVjdElkXCI6NTEwNzEwfSJ9.buqOPeNIT1Qcv4xF3Yya6cQyDJOwcDJUepjqsSvdn4g'
+    'Stripo-Api-Auth': 'eyJhbGciOiJIUzI1NiJ9.eyJzZWN1cml0eUNvbnRleHQiOiJ7XCJhcGlLZXlcIjpcIjRjZGEyNGE2LTFiMTEtNDU5My04ZjJlLTMwOWY5NjY0YmE3ZlwiLFwicHJvamVjdElkXCI6NTEwNzExfSJ9.mGEaLIpIxXeAA8v3tJv-d5S_RycJGCprjgMh31Hm9l4'
   }
 };
 request(options, function (error, response) {
