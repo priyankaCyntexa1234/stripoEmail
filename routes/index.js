@@ -43,6 +43,7 @@ exports.config = (req, res) => {
       var id=token[key].emailId;
       console.log("name"+n);
       console.log("name"+id);
+      var list1=[];
       list1.push({
         name: n,
         value:id,
