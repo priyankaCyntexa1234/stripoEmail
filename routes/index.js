@@ -44,10 +44,11 @@ exports.config = (req, res) => {
       console.log("name"+n);
       console.log("name"+id);
       list1.push({
-        'Name':token[key].name,
-        'Id':token[key].emailId
+        name: n,
+        value:id,
       })
     }
+    console.log()
     console.log("list1==="+JSON.stringify(list1));
     console.log("list1==="+JSON.stringify(list1).length);
     //console.log(response.body.data);
@@ -57,7 +58,7 @@ exports.config = (req, res) => {
 
 
 exports.ui = async(req, res) => {
- console.log("hiiiiiii")
+console.log("hiiiiiii")
 
 
 await stripoemails();
