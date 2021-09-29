@@ -69,4 +69,5 @@ console.log("byeee")
     title: 'Custom Activity',
     dropdownOptions: list1,
   });
+  list1=[];
 };
