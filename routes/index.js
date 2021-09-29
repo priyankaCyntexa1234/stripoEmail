@@ -55,7 +55,14 @@ console.log("byeee")
   res.render('index', {
     title: 'Custom Activity',
     dropdownOptions: [
-      list1
+      {
+        name: 'Journey Entry',
+        value: 'journeyEntry',
+      },
+      {
+        name: 'Journey Exit',
+        value: 'journeyExit',
+      },
     ],
   });
 };
