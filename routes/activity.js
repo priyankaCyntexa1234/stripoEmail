@@ -15,7 +15,8 @@ exports.execute = async (req, res) => {
   console.log('----------------------logger------------------------');
 
   logger.info(data);
-
+  
+  console.log(data.inArguments);
   console.log('logger');
 
   try {
