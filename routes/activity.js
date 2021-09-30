@@ -15,6 +15,8 @@ exports.execute = async (req, res) => {
 
   logger.info(data);
 
+  console.log('logger');
+
   try {
     const id = Uuidv1();
 
@@ -38,6 +40,7 @@ exports.execute = async (req, res) => {
     status: 'ok',
   });
 };
+
 
 /**
  * Endpoint that receives a notification when a user saves the journey.
