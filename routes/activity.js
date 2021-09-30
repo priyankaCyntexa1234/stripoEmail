@@ -2,6 +2,7 @@ const { v1: Uuidv1 } = require('uuid');
 const JWT = require('../utils/jwtDecoder');
 const SFClient = require('../utils/sfmc-client');
 const logger = require('../utils/logger');
+var request = require('request');
 
 /**
  * The Journey Builder calls this method for each contact processed by the journey.
@@ -19,8 +20,9 @@ exports.execute = async (req, res) => {
   console.log(data.inArguments);
   var emaildid=data.inArguments[0]['DropdownOptions'];
   console.log(data.inArguments[0]['DropdownOptions']);
+  fetchemail(data.inArguments[0]['DropdownOptions']);
   console.log('logger');
-
+ 
   try {
     const id = Uuidv1();
 
@@ -80,3 +82,17 @@ exports.validate = (req, res) => {
     status: 'ok',
   });
 };
+
+function fetchemail(id){
+  console.log('-------------------------------'+id);
+var options = {
+  'method': 'GET',
+  'url': 'https://stripo.email/emailgeneration/export/html/emails/\n{'+id+'}',
+  'headers': {
+  }
+};
+request(options, function (error, response) {
+  if (error) throw new Error(error);
+  console.log(response.body);
+});
+}
