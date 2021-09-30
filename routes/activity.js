@@ -17,6 +17,8 @@ exports.execute = async (req, res) => {
   logger.info(data);
   
   console.log(data.inArguments);
+  var emaildid=data.inArguments['DropdownOptions'];
+  console.log(emaildid);
   console.log('logger');
 
   try {
